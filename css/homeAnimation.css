@@ -1,0 +1,33 @@
+.a-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    border-radius: 25%; 
+    aspect-ratio: 1 / 1; 
+}
+.card-text {
+    opacity: 1;
+    transition: 0 all 1s ease-in-out;
+}
+.card-icon{
+    width:50%;
+    height: auto;
+}
+.a-card:hover {
+    transform: rotate(360deg);
+    border-radius: 50%;
+}
+
+.a-card:hover .card-text {
+    opacity: 0;
+    visibility: hidden; 
+    height: 0;          
+}
+
+.a-card:hover .card-icon {
+    width: 100%;
+    transform: scale(1.1);
+}
