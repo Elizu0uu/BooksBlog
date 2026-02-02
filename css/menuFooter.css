@@ -42,8 +42,11 @@ a{
     flex-wrap: nowrap;
     justify-content: center;
     align-content: center;
+    transition: transform 0.3s ease-in-out;
 }
-
+.menu-panel li:hover{
+    transform: translateY(-10px);
+}
 
 .footerSettings{
     display: flex;
@@ -58,8 +61,11 @@ a{
     display: inline-block;
     flex-wrap: nowrap;
     align-content: center;
+    transition: transform 0.3s ease-in-out;
 }
-
+.footerSettings ul li:hover{
+    transform: translateY(10px);
+}
 @media(max-width: 600px){
     .main-title h1{
         font-size: 6cqw;

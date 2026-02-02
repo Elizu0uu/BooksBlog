@@ -11,8 +11,8 @@
     border-radius:25%;
     container-type: inline-size;
 }
-figure{
-    margin:0;
+image{
+    margin: 0;
 }
 
 @media(max-width: 600px){
