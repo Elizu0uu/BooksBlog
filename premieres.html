@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/premieres.css">
+    <link rel="stylesheet" href="css/menuFooter.css">
+    <title>your.passion.for.books</title>
+</head>
+<body>
+    <section class="headSettings">
+        <div class="main-title">
+            <h1>your.passion.for.books</h1>
+            <h2>~Premieres~</h2>
+        </div>
+        <div class="menu-panel">
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="premieres.html">Premieres</a></li>
+                <li><a href="reviews.html">Our reviews</a></li>
+                <li><a href="forum.html">Let's talk</a></li>
+                <li><a href="aboutme.html">About us</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="mainSettings">
+        <div>
+            <table id="premieres-container"></table>
+        </div>
+    </section>
+    <section class="footerSettings">
+        <p>&copy; 2024 JHiTSWWW</p>
+        <ul>
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="premieres.html">Premieres</a></li>
+            <li><a href="reviews.html">Our reviews</a></li>
+            <li><a href="forum.html">Let's talk</a></li>
+            <li><a href="aboutme.html">About us</a></li>
+        </ul>
+    </section>
+    <script>
+        async function loadPremieres() {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/premieres');
+                const books = await response.json();
+                
+                const container = document.getElementById('premieres-container'); 
+                container.innerHTML = ''; 
+
+                books.forEach(book => {
+                    const card = `
+                        <tr class="book-card">
+                            <td class="book-image-cell">
+                                <img src="${book.image}" alt="${book.title}">
+                            </td>
+                            <td class="book-info-cell">
+                                <div class="info-card-content">
+                                    <h2>Premiere will be ${book.premiereDate}</h2>
+                                    <div class="title-info-flex">
+                                        <h2>${book.title}</h2>
+                                        <h3>${book.author}</h3>
+                                    </div>
+                                    <p class="book-description">${book.description}</p>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                    container.innerHTML += card;
+                });
+            } catch (error) {
+                console.error('Error in data loading:', error);
+            }
+        }
+
+        window.onload = loadPremieres;
+    </script>
+</body>
+</html>

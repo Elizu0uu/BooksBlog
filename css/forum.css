@@ -1,0 +1,45 @@
+#forum-container {
+    width: 80vw;
+    border-collapse: separate; 
+    border-spacing: 0 20px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comment-card {
+    border: 2px solid black;
+}
+
+.comment-card td {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding: 20px;
+}
+
+.comment-card td:first-child {
+    border-left: 2px solid black;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 30%; 
+}
+
+.comment-card td:last-child {
+    border-right: 2px solid black;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.comment-info-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%; 
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}

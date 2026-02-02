@@ -1,0 +1,102 @@
+.contentSettings{
+    display: grid;
+    justify-items: center;
+    container-type: inline-size;
+}
+.a-card{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    border-radius:25%;
+    container-type: inline-size;
+}
+figure{
+    margin:0;
+}
+
+@media(max-width: 600px){
+    .contentSettings{
+        grid-template-columns: auto;
+        margin:3%;
+    }
+    .a-card{
+        width: 70cqw;
+        height: 70cqw;
+        padding: 1.5rem;
+        border: 2px solid lightgrey;
+        margin: 2%;
+        aspect-ratio: 1/1;
+    }
+    .a-card div p{
+        font-size: 6cqw;
+    }
+    img{
+        width: 50cqw;
+        height: 50cqw;
+    }
+}
+@media(min-width: 601px) and (max-width: 1024px){
+    .contentSettings{
+        grid-template-columns: 1fr;
+        margin:3%;
+    }
+    .a-card{
+        width: 60cqw;
+        height: 60cqw;
+        aspect-ratio: 1/1;
+        padding: 4.5cqw;
+        border: 2px solid lightgrey;
+        margin: 3%;
+    }
+    .a-card div p{
+        font-size: 5cqw;
+    }
+    img{
+        width: 40cqw;
+        height: 40cqw;
+    }
+}
+@media(min-width: 1025px) and (max-width: 1440px){
+    .contentSettings{
+        grid-template-columns: 1fr 1fr;
+        margin:3%;
+    }
+    .a-card{
+        width: 40cqw;
+        height: 40cqw;
+        aspect-ratio: 1/1;
+        padding: 4.5cqw;
+        border: 2px solid lightgrey;
+        margin: 3%;
+    }
+    .a-card div p{
+        font-size: 6cqw;
+    }
+    img{
+        width: 40cqw;
+        height: 40cqw;
+    }
+}
+@media(min-width: 1441px){
+    .contentSettings{
+        grid-template-columns: 1fr 1fr;
+        margin:1%;
+    }
+    .a-card{
+        width: 30cqw;
+        height: 30cqw;
+        aspect-ratio: 1/1;
+        padding: 4cqw;
+        border: 2px solid lightgrey;
+        margin: 3%;
+    }
+    .a-card div p{
+        font-size: 6cqw;
+    }
+    img{
+        width: 30cqw;
+        height: 30cqw;
+    }
+}
+

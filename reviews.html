@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reviews.css">
+    <link rel="stylesheet" href="css/menuFooter.css">
+    <title>your.passion.for.books</title>
+</head>
+<body>
+    <section class="headSettings">
+        <div class="main-title">
+            <h1>your.passion.for.books</h1>
+            <h2>~Our reviews~</h2>
+        </div>
+        <div class="menu-panel">
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="premieres.html">Premieres</a></li>
+                <li><a href="reviews.html">Our reviews</a></li>
+                <li><a href="forum.html">Let's talk</a></li>
+                <li><a href="aboutme.html">About us</a></li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <table id="reviews-container"></table>
+    </section>
+    <section class="footerSettings">
+        <p>&copy; 2024 JHiTSWWW</p>
+        <ul>
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="premieres.html">Premieres</a></li>
+            <li><a href="reviews.html">Our reviews</a></li>
+            <li><a href="forum.html">Let's talk</a></li>
+            <li><a href="aboutme.html">About us</a></li>
+        </ul>
+    </section>
+    <script>
+        async function loadReviews() {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/api/reviews');
+                const reviews = await response.json();
+                
+                const container = document.getElementById('reviews-container'); 
+                container.innerHTML = ''; 
+
+                reviews.forEach(review => {
+                    const card = `
+                        <tr class="review-card">
+                            <td class="review-image-cell">
+                                <img src="${review.image}" alt="${review.title}">
+                            </td>
+                            <td class="review-info-cell">
+                                <div class="info-card-content">
+                                    <div class="title-info-flex">
+                                        <h2>${review.title}</h2>
+                                        <h3>${review.bookAuthor}</h3>
+                                    </div>
+                                    <div>
+                                        <p class="review-content">${review.review}</p>
+                                        <div>
+                                            <p>${review.reviewAuthor}</p>
+                                            <p>${review.publicationDate}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    `;
+                    container.innerHTML += card;
+                });
+            } catch (error) {
+                console.error('Błąd pobierania danych:', error);
+            }
+        }
+
+        window.onload = loadReviews;
+    </script>
+</body>
+</html>

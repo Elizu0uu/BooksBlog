@@ -1,0 +1,180 @@
+#premieres-container {
+    border-collapse: separate; 
+    margin-top: 3%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title-info-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width: 600px){
+    #premiere-container{
+        width: 80vw;
+    }
+    .book-card {
+        border: 2px solid lightgrey;
+        container-type: inline-size;
+    }
+    .book-card td {
+        border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        padding: 20px;
+    }
+    .book-card td div{
+        font-size: 2.5cqw;
+    }
+    .book-card td div p{
+        font-size: 3cqw;
+    }
+    .book-card td:first-child {
+        border-left: 2px solid lightgrey;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 30%; 
+    }
+    .book-card td:last-child {
+        border-right: 2px solid lightgrey;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .title-info-flex {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%; 
+        max-width: 250px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+@media(min-width: 601px) and (max-width: 1024px){
+    #premiere-container{
+        width: 80vw;
+    }
+    .book-card {
+        border: 2px solid lightgrey;
+        container-type: inline-size;
+    }
+    .book-card td {
+        border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        padding: 20px;
+    }
+    .book-card td div{
+        font-size: 2.5cqw;
+    }
+    .book-card td div p{
+        font-size: 3cqw;
+    }
+    .book-card td:first-child {
+        border-left: 2px solid lightgrey;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 30%; 
+    }
+    .book-card td:last-child {
+        border-right: 2px solid lightgrey;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .title-info-flex {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%; 
+        max-width: 250px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+@media(min-width: 1025px) and (max-width: 1440px){
+    #premiere-container{
+        width: 50vw;
+    }
+    .book-card {
+        border: 2px solid lightgrey;
+        container-type: inline-size;
+    }
+    .book-card td {
+        border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        padding: 20px;
+    }
+    .book-card td div{
+        font-size: 1.5cqw;
+    }
+    .book-card td div p{
+        font-size: 1.5cqw;
+    }
+    .book-card td:first-child {
+        border-left: 2px solid lightgrey;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 30%; 
+    }
+    .book-card td:last-child {
+        border-right: 2px solid lightgrey;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .title-info-flex {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%; 
+        max-width: 250px;
+        height: auto;
+        border-radius: 10px;
+    }
+}
+@media(min-width: 1441px){
+    table{
+        width:80%;
+    }
+    #premiere-container{
+        width: 25vw;
+    }
+    .book-card {
+        border: 2px solid lightgrey;
+        container-type: inline-size;
+    }
+    .book-card td {
+        border-top: 2px solid lightgrey;
+        border-bottom: 2px solid lightgrey;
+        padding: 20px;
+    }
+    .book-card td div{
+        font-size: 1.25cqw;
+    }
+    .book-card td div p{
+        font-size: 1cqw;
+    }
+    .book-card td:first-child {
+        border-left: 2px solid lightgrey;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        width: 30%; 
+    }
+    .book-card td:last-child {
+        border-right: 2px solid lightgrey;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .title-info-flex {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    img {
+        width: 100%; 
+        max-width: 250px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+}
